@@ -1,3 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
 <window id="20">
     <defaultcontrol always="true">2</defaultcontrol>
     <allowoverlay>no</allowoverlay>
@@ -8,12 +9,12 @@
             <posx>90</posx>
             <posy>50</posy>
             <animation type="WindowOpen" reversible="false">
-                <effect type="zoom" start="80" end="100" center="640,360" easing="out" tween="back" time="300" />
-                <effect type="fade" start="0" end="100" time="300" />
+                <effect type="zoom" start="80" end="100" center="640,360" easing="out" tween="back" time="300"/>
+                <effect type="fade" start="0" end="100" time="300"/>
             </animation>
             <animation type="WindowClose" reversible="false">
-                <effect type="zoom" start="100" end="80" center="640,360" easing="in" tween="back" time="300" />
-                <effect type="fade" start="100" end="0" time="300" />
+                <effect type="zoom" start="100" end="80" center="640,360" easing="in" tween="back" time="300"/>
+                <effect type="fade" start="100" end="0" time="300"/>
             </animation>      
             <control type="image">
                 <posx>0</posx>
@@ -22,7 +23,7 @@
                 <height>640</height>
                 <texture border="20">videoinfoback.png</texture>
             </control>
-            <control type="button" id ="4">
+            <control type="button" id="4">
                 <description>Enable Login screen</description>
                 <posx>10</posx>
                 <posy>90</posy>
@@ -37,12 +38,12 @@
                 <texturefocus border="5">menuitemFO.png</texturefocus>
                 <onleft>2</onleft>
                 <onright>2</onright>
-                <onup>4</onup>
-                <ondown>4</ondown>
+                <onup>5</onup>
+                <ondown>5</ondown>
                 <enable>!Window.IsVisible(ProfileSettings)</enable>
             </control>
             <control type="label">
-                <posx>250</posx>
+                <right>250</right>
                 <posy>135</posy>
                 <width>240</width>
                 <height>25</height>
@@ -54,7 +55,7 @@
                 <visible>System.HasLoginScreen</visible>
             </control>
             <control type="label">
-                <posx>250</posx>
+                <right>250</right>
                 <posy>135</posy>
                 <width>240</width>
                 <height>25</height>
@@ -65,9 +66,50 @@
                 <label>1223</label>
                 <visible>!System.HasLoginScreen</visible>
             </control>
+			<control type="button" id="5"> 
+				<description>Choose auto login user</description> 
+				<posx>10</posx> 
+				<posy>161</posy> 
+				<width>250</width> 
+				<height>72</height> 
+				<textoffsety>8</textoffsety> 
+				<label>33084</label> 
+				<font>font24_title</font> 
+				<align>right</align> 
+				<aligny>top</aligny> 
+				<texturenofocus border="5">menuitemNF.png</texturenofocus> 
+				<texturefocus border="5">menuitemFO.png</texturefocus> 
+				<onleft>2</onleft> 
+				<onright>2</onright> 
+				<onup>4</onup> 
+				<ondown>4</ondown> 
+				<visible>!System.HasLoginScreen</visible> 
+				<enable>!Window.IsVisible(ProfileSettings) + !System.HasLoginScreen</enable> 
+			</control> 
+			<control type="button"> 
+				<description>Choose auto login user (grayed out)</description> 
+				<posx>10</posx> 
+				<posy>161</posy> 
+				<width>250</width> 
+				<height>72</height> 
+				<textoffsety>8</textoffsety> 
+				<label>33084</label> 
+				<font>font24_title</font> 
+				<textcolor>grey2</textcolor> 
+				<align>right</align> 
+				<aligny>top</aligny> 
+				<texturenofocus border="5">MenuItemNF.png</texturenofocus> 
+				<texturefocus border="5">MenuItemFO.png</texturefocus> 
+				<onleft>2</onleft> 
+				<onright>2</onright> 
+				<onup>4</onup> 
+				<ondown>4</ondown> 
+				<visible>System.HasLoginScreen</visible> 
+				<enable>false</enable> 
+			</control> 
             <control type="group">
                 <posx>20</posx>
-                <posy>210</posy>
+                <posy>240</posy>
                 <control type="image">
                     <posx>0</posx>
                     <posy>0</posy>
